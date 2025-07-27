@@ -199,16 +199,16 @@ function inferTypeFromInput(
 export function isAdvancedCodeNode<Config>(
   node: CodeNode<Config>
 ): node is AdvancedCodeNode<Config> {
-  return (node as AdvancedCodeNode<Config>).defaultConfig !== undefined;
+  return (node as AdvancedCodeNode<Config>)?.defaultConfig !== undefined;
 }
 
 export function isSimplifiedCodeNode<Config>(
   node: CodeNode<Config>
 ): node is SimpleCodeNode<Config> {
   return (
-    (node as SimpleCodeNode<Config>).inputs !== undefined &&
-    (node as SimpleCodeNode<Config>).outputs !== undefined &&
-    (node as SimpleCodeNode<Config>).run !== undefined
+    (node as SimpleCodeNode<Config>)?.inputs !== undefined &&
+    (node as SimpleCodeNode<Config>)?.outputs !== undefined &&
+    (node as SimpleCodeNode<Config>)?.run !== undefined
   );
 }
 
