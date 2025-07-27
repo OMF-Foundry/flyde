@@ -31,6 +31,7 @@
     "dev": "tsc -p . -w --incremental",
     "build": "rm -rf dist && tsc -p .",
     "prod": "node dist/index.js",
+    "__publish": "npm version patch && npm publish --registry http://localhost:4873",
     "start": "concurrently 'ts-node-dev src/index.ts' 'npm run dev'"
   },
   "files": [
